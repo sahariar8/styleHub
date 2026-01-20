@@ -16,6 +16,7 @@ return new class extends Migration {
             $table->string('slug')->unique();
             $table->foreignId('category_id')->constrained()->cascadeOnDelete();
             $table->foreignId('brand_id')->nullable()->constrained()->nullOnDelete();
+            $table->string('img');
             $table->decimal('price', 10, 2);
             $table->text('description')->nullable();
             $table->boolean('is_published')->default(false);
